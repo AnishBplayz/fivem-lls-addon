@@ -7,7 +7,6 @@ on:
 
 jobs:
   update-natives:
-    if: github.actor_id != 210085057
     runs-on: ubuntu-latest
     steps:
       - name: Install Bun
@@ -31,7 +30,7 @@ jobs:
 
       - name: Generate natives
         run: |
-          wget https://github.com/communityox/rage-lua-natives/archive/main.zip -O repo.zip
+          wget https://github.com/AnishBplayz/rage-lua-natives/archive/main.zip -O repo.zip
           unzip repo.zip
           cd rage-lua-natives-main
           bun install --frozen-lockfile
