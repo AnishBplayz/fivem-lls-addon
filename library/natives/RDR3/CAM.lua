@@ -1038,13 +1038,6 @@ function N_0xe28f73212a813e82(p0, p1, p2, p3) end
 function N_0xe2bb2d6a9fe2ecde(p0) end
 
 ---**`CAM` ``**  
----[Native Documentation](https://rdr3natives.com/?_0xE4B7945EF4F1BFB2)  
----This native does not have an official description.
----@param cam integer
----@return any
-function N_0xe4b7945ef4f1bfb2(cam) end
-
----**`CAM` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0xE6F364DE6C2FDEFE)  
 ---This native does not have an official description.
 function N_0xe6f364de6c2fdefe() end
@@ -1169,24 +1162,23 @@ function ReactivatePedHeadshotExecuteSlowcam(ped, p1) end
 ---@param p5 integer
 function RenderScriptCams(render, ease, easeTime, p3, p4, p5) end
 
----**`CAM` ``**  
+---**`CAM` `client`**  
 ---[Native Documentation](https://rdr3natives.com/?_0x69D65E89FFD72313)  
 ---Creates Cinematic Black Bars (at top and bottom)
----Disable instantly: false/false, Enable instantly: true/true
----@param p0 boolean
----@param p1 boolean
-function RequestLetterBoxNow(p0, p1) end
+---@param state boolean
+---@param transitionTime integer
+function RequestLetterBoxNow(state, transitionTime) end
 
----**`CAM` ``**  
+---**`CAM` `client`**  
 ---[Native Documentation](https://rdr3natives.com/?_0xE296208C273BD7F0)  
----This native does not have an official description.
----@param p0 integer
----@param p1 integer
+---Creates Cinematic Black Bars (at top and bottom) (this frame)
+---@param startTransitionTime integer
+---@param endTransitionTime integer
 ---@param p2 boolean
 ---@param p3 integer
 ---@param p4 boolean
 ---@param p5 boolean
-function RequestLetterBoxOvertime(p0, p1, p2, p3, p4, p5) end
+function RequestLetterBoxOvertime(startTransitionTime, endTransitionTime, p2, p3, p4, p5) end
 
 ---**`CAM` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0x87295BCA613800C8)  
@@ -1227,6 +1219,13 @@ function SetCamControlsMiniMapHeading(cam, p1) end
 ---@param posY number
 ---@param posZ number
 function SetCamCoord(cam, posX, posY, posZ) end
+
+---**`CAM` ``**  
+---[Native Documentation](https://rdr3natives.com/?_0xE4B7945EF4F1BFB2)  
+---Set cam DOF and focal settings
+---@param cam integer
+---@return any
+function SetCamDofParams(cam) end
 
 ---**`CAM` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0x5E32817BF6302111)  

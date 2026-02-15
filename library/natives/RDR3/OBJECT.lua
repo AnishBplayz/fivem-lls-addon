@@ -495,6 +495,13 @@ function IsDoorRegisteredWithOwner(doorHash) end
 function IsDoorRegisteredWithSystem(doorHash) end
 
 ---**`OBJECT` ``**  
+---[Native Documentation](https://rdr3natives.com/?_0x20135AF9C10D2A3D)  
+---returns true if the model hash is a portable pickup its used before creating a portable pick up for example
+---@param modelHash integer | string
+---@return boolean
+function IsModelAPortablePickup(modelHash) end
+
+---**`OBJECT` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0x0378C08504160D0D)  
 ---This native does not have an official description.
 ---@param object integer
@@ -565,13 +572,6 @@ function N_0x0c0a373d181bf900(doorHash) end
 ---_SET_A(MBIENT_PICKUP_?)*
 ---@param p0 boolean
 function N_0x1f5e07e14a86fafc(p0) end
-
----**`OBJECT` ``**  
----[Native Documentation](https://rdr3natives.com/?_0x20135AF9C10D2A3D)  
----This native does not have an official description.
----@param p0 any
----@return any
-function N_0x20135af9c10d2a3d(p0) end
 
 ---**`OBJECT` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0x22031584496CFB70)  

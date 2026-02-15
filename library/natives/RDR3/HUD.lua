@@ -64,8 +64,9 @@ function CreateMpGamerTagOnEntity(entity, text) end
 ---This native does not have an official description.
 function DisableFrontendThisFrame() end
 
----**`HUD` ``**  
+---**`HUD` `client`**  
 ---[Native Documentation](https://rdr3natives.com/?_0x8BC7C1F929D07BF3)  
+---https://gist.github.com/outsider31000/c640961d17b2e4fb0435a413710e1930 list of presets
 ---Old name: _DISPLAY_HUD_COMPONENT
 ---@param component integer | string
 function DisableHudContext(component) end
@@ -103,16 +104,16 @@ function DoesTextBlockExist(textDatabase) end
 ---@return boolean
 function DoesTextLabelExist(label) end
 
----**`HUD` ``**  
+---**`HUD` `client`**  
 ---[Native Documentation](https://rdr3natives.com/?_0x4CC5F2FC1332577F)  
----https://github.com/femga/rdr3_discoveries/tree/master/graphics/HUD/hud_presets
+---https://gist.github.com/outsider31000/c640961d17b2e4fb0435a413710e1930 list of presets
 ---Old name: _HIDE_HUD_COMPONENT
 ---@param component integer | string
 function EnableHudContext(component) end
 
----**`HUD` ``**  
+---**`HUD` `client`**  
 ---[Native Documentation](https://rdr3natives.com/?_0xC9CAEAEEC1256E54)  
----This native does not have an official description.
+---https://gist.github.com/outsider31000/c640961d17b2e4fb0435a413710e1930 list of presets
 ---@param component integer | string
 function EnableHudContextThisFrame(component) end
 
@@ -155,6 +156,13 @@ function GetFilenameForAudioConversation(labelName) end
 ---@param worldZ number
 ---@return integer, number, number
 function GetHudScreenPositionFromWorldPosition(worldX, worldY, worldZ) end
+
+---**`HUD` ``**  
+---[Native Documentation](https://rdr3natives.com/?_0x7EC0D68233E391AC)  
+---Returns the state of a specific HUD Component
+---@param hudComponent integer
+---@return integer
+function GetHudState(hudComponent) end
 
 ---**`HUD` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0x3429670F9B9EF2D3)  
@@ -436,13 +444,6 @@ function N_0x53ce46c01a089da1(prompt, p1) end
 function N_0x5651516d947abc53() end
 
 ---**`HUD` ``**  
----[Native Documentation](https://rdr3natives.com/?_0x7EC0D68233E391AC)  
----This native does not have an official description.
----@param p0 integer
----@return integer
-function N_0x7ec0d68233e391ac(p0) end
-
----**`HUD` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0x806862E5D266CF38)  
 ---This native does not have an official description.
 ---@param p0 any
@@ -483,13 +484,6 @@ function N_0x958278b97c4affd8(p0, p1) end
 ---@param p0 any
 ---@param p1 any
 function N_0x9d37eb5003e0f2cf(p0, p1) end
-
----**`HUD` ``**  
----[Native Documentation](https://rdr3natives.com/?_0xB0E8599243B3F568)  
----This native does not have an official description.
----@param p0 any
----@return any
-function N_0xb0e8599243b3f568(p0) end
 
 ---**`HUD` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0xBFFF81E12A745A5F)  
@@ -884,6 +878,13 @@ function UiPromptHasMashModeCompleted(prompt) end
 ---@param prompt integer
 ---@return boolean
 function UiPromptHasMashModeFailed(prompt) end
+
+---**`HUD` `client`**  
+---[Native Documentation](https://rdr3natives.com/?_0xB0E8599243B3F568)  
+---returns true if the mash mode have just been pressed
+---@param prompt integer
+---@return boolean
+function UiPromptHasMashModeJustPressed(prompt) end
 
 ---**`HUD` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0x3CE854D250A88DAF)  

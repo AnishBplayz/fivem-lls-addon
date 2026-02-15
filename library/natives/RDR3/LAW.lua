@@ -148,11 +148,11 @@ function GetHudPlayerCrimeType(player) end
 
 ---**`LAW` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0x532C5FDDB986EE5C)  
----This native does not have an official description.
+---Returns the player registed crime data at the index
 ---@param player integer
----@param p1 integer
----@return boolean, integer
-function GetPlayerRegisteredCrime(player, p1) end
+---@param index integer
+---@return boolean, any
+function GetPlayerRegisteredCrime(player, index) end
 
 ---**`LAW` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0x717DA2281DF90855)  

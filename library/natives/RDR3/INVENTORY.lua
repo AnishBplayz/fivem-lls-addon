@@ -272,6 +272,15 @@ function InventoryGetInventoryItem(inventoryId, p3) end
 function InventoryGetInventoryItemChild(inventoryId, childIndex) end
 
 ---**`INVENTORY` ``**  
+---[Native Documentation](https://rdr3natives.com/?_0x9AC53CB6907B4428)  
+---p1 (out) and p2 (in) are both script arrays?
+---item: can be a component item, see SHOP_CATALOG_BUILD_LIST_OF_WEAPON_COMPONENTS
+---@param item integer | string
+---@param maxResults integer
+---@return boolean, any
+function InventoryGetInventoryItemCompatibleSlots(item, maxResults) end
+
+---**`INVENTORY` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0xC97E0D2302382211)  
 ---This native does not have an official description.
 ---@param inventoryId integer
@@ -611,14 +620,6 @@ function N_0x75cfac49301e134f(databindingEntryId, p1, p2) end
 ---@param ped integer
 ---@return any
 function N_0x951847cef3d829ff(p0, ped) end
-
----**`INVENTORY` ``**  
----[Native Documentation](https://rdr3natives.com/?_0x9AC53CB6907B4428)  
----p1 (out) and p2 (in) are both script arrays?
----item: can be a component item, see SHOP_CATALOG_BUILD_LIST_OF_WEAPON_COMPONENTS
----@param item integer | string
----@return boolean, any, any
-function N_0x9ac53cb6907b4428(item) end
 
 ---**`INVENTORY` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0x9B4E793B1CB6550A)  

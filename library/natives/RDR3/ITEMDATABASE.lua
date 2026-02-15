@@ -323,6 +323,15 @@ function ItemdatabaseGetItemPathset(key, defaultPathset) end
 function ItemdatabaseGetItemPriceModifiers(key) end
 
 ---**`ITEMDATABASE` ``**  
+---[Native Documentation](https://rdr3natives.com/?_0x8870895BA5ED9385)  
+---Returns the ci tags of the selected item tag
+---key: Hash — Wanted key (e.g WEAPON_RIFLE_VARMINT).tag: Hash — The item tag (e.g TAG_ITEM_PROPERTY).data: Any* - CI tag list starting at the offset "1", the offset 0 is to define the max number of tags you want to collect (uselly 5 in R* scripts, surelly the limit)
+---@param key integer | string
+---@param tagType integer | string
+---@return integer, any
+function ItemdatabaseGetItemTagTags(key, tagType) end
+
+---**`ITEMDATABASE` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0x6111B8F9413F413A)  
 ---This native does not have an official description.
 ---@param item integer | string
@@ -433,6 +442,14 @@ function ItemdatabaseGetShopLayoutMenuInfoByIndex(layout, menu, index) end
 ---@param index integer
 ---@return boolean, integer
 function ItemdatabaseGetShopLayoutMenuPageKey(layout, menu, index) end
+
+---**`ITEMDATABASE` ``**  
+---[Native Documentation](https://rdr3natives.com/?_0xDBEADA0DF5F9AB9F)  
+---Returns the layout page info at the selected index
+---@param layout integer | string
+---@param index integer
+---@return boolean, integer
+function ItemdatabaseGetShopLayoutPageInfoByIndex(layout, index) end
 
 ---**`ITEMDATABASE` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0xB347C100DF0C9B7F)  
@@ -605,14 +622,6 @@ function N_0x799fcd53358ed5fa(bundle, p1) end
 function N_0x7a35a72a692be9db(p0) end
 
 ---**`ITEMDATABASE` ``**  
----[Native Documentation](https://rdr3natives.com/?_0x8870895BA5ED9385)  
----This native does not have an official description.
----@param key integer | string
----@param tagType integer | string
----@return integer, any
-function N_0x8870895ba5ed9385(key, tagType) end
-
----**`ITEMDATABASE` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0x8D029948CA29409B)  
 ---_ITEMDATABASE_FILLOUT_(A)* - _ITEMDATABASE_FILLOUT_(B)*
 ---@param award integer | string
@@ -640,16 +649,8 @@ function N_0xc4146375d8a0b374(bundle, p1, index, p3) end
 
 ---**`ITEMDATABASE` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0xD076DB9B96FAADF1)  
----This native does not have an official description.
+---_ITEMDATABASE_GET_AWARD_*
 ---@param award integer | string
 ---@return boolean, any
 function N_0xd076db9b96faadf1(award) end
-
----**`ITEMDATABASE` ``**  
----[Native Documentation](https://rdr3natives.com/?_0xDBEADA0DF5F9AB9F)  
----This native does not have an official description.
----@param layout integer | string
----@param index integer
----@return boolean, integer
-function N_0xdbeada0df5f9ab9f(layout, index) end
 

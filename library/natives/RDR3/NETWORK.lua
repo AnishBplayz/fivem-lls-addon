@@ -2671,11 +2671,6 @@ function NetworkIsTunableCloudRequestPending() end
 ---@return boolean
 function NetworkIsTutorialSessionChangePending() end
 
----**`NETWORK` `client`**  
----[Native Documentation](https://rdr3natives.com/?_0xFD4272A137703449)  
----Only used in R* Script startup_clip Seems to just kill the network connection, sets the players coords to 0, 0, 0 when doing GetEntityCoords
-function NetworkLeaveSession() end
-
 ---**`NETWORK` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0x2A48D9567940598F)  
 ---Returns false if pedshot push failed
@@ -3062,6 +3057,11 @@ function NetworkSessionRequestSessionPrivate(flags, numPlayers, userHash) end
 ---@param userHash integer
 ---@return boolean, any
 function NetworkSessionRequestSessionSeamless(flags, seamlessType, userHash) end
+
+---**`NETWORK` `client`**  
+---[Native Documentation](https://rdr3natives.com/?_0xFD4272A137703449)  
+---Only used in R* Script startup_clip Seems to just kill the network connection, sets the players coords to 0, 0, 0 when doing GetEntityCoords
+function NetworkSessionRequestTerminate() end
 
 ---**`NETWORK` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0x0AE241A4A9ADEEEC)  

@@ -260,6 +260,35 @@ function FadeAndDestroyVehicle() end
 function ForcePlaybackRecordedVehicleUpdate(vehicle, p1) end
 
 ---**`VEHICLE` ``**  
+---[Native Documentation](https://rdr3natives.com/?_0x0E558D3A49D759D6)  
+---Collects all passenger peds (excluding the driver) from the specified wagon-type vehicle and adds them as indexed items to the provided itemset.
+---Notes:
+---- Always clear the itemset before calling.
+---- Returns 0 if the wagon is empty or auto-population is disabled
+---  (ENTITY::_0x119A5714578F4E05(wagon, false)).
+---- Itemset may contain dead peds; filter with IS_ENTITY_DEAD if needed.
+---- Often used alongside wagon auto-population management.
+---@param train integer
+---@param itemset integer
+---@return integer
+function GetAllTrainPassengers(train, itemset) end
+
+---**`VEHICLE` ``**  
+---[Native Documentation](https://rdr3natives.com/?_0x0BA4250D20007C2E)  
+---Returns the balloon object attached to a hot air balloon vehicle. 
+---
+---If the input vehicle is a hot air balloon, the native returns the object entity
+---that represents the balloon itself (the inflated top part). 
+---If the vehicle is not balloon-type or the balloon object does not exist,the function returns 0. 
+---Always validate the returned handle with ENTITY::DOES_ENTITY_EXIST.
+---Notes:
+---- Only useful for hot air balloon vehicles.
+---- The returned handle is typically an OBJECT, not a PED or VEHICLE.
+---@param vehicle integer
+---@return integer
+function GetBalloonObjectFromVehicle(vehicle) end
+
+---**`VEHICLE` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0x58F2244C1286D09A)  
 ---This native does not have an official description.
 ---@param vehicle integer
@@ -440,6 +469,16 @@ function GetRowingOars(vehicle) end
 ---@param stationIndex integer
 ---@return vector3
 function GetStationCoordsFromTrainStationData(trackIndex, stationIndex) end
+
+---**`VEHICLE` ``**  
+---[Native Documentation](https://rdr3natives.com/?_0x9CC94A948EAF5372)  
+---Returns the station hash for a track and station index.
+---- trackIndex: int — From 0 to 24
+---- stationIndex: int — From 0 to 7
+---@param trackIndex integer
+---@param stationIndex integer
+---@return integer
+function GetStationFromTrainStationData(trackIndex, stationIndex) end
 
 ---**`VEHICLE` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0x233B51C7913FA031)  
@@ -996,13 +1035,6 @@ function N_0x0794199b25e499e1(wagon, p1) end
 function N_0x07e2e21e799080a0(p0, p1) end
 
 ---**`VEHICLE` ``**  
----[Native Documentation](https://rdr3natives.com/?_0x0BA4250D20007C2E)  
----This native does not have an official description.
----@param p0 any
----@return any
-function N_0x0ba4250d20007c2e(p0) end
-
----**`VEHICLE` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0x0CD7914D17A970AB)  
 ---This native does not have an official description.
 ---@param p0 any
@@ -1014,14 +1046,6 @@ function N_0x0cd7914d17a970ab(p0, p1) end
 ---This native does not have an official description.
 ---@param trackIndex integer
 function N_0x0d5fdf0d36fa10cd(trackIndex) end
-
----**`VEHICLE` ``**  
----[Native Documentation](https://rdr3natives.com/?_0x0E558D3A49D759D6)  
----This native does not have an official description.
----@param p0 any
----@param p1 any
----@return any
-function N_0x0e558d3a49d759d6(p0, p1) end
 
 ---**`VEHICLE` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0x0F7F603BDE08C4D3)  
@@ -1555,14 +1579,6 @@ function N_0x9868c0d0134855f7(p0) end
 ---@param p1 any
 ---@param p2 any
 function N_0x98a7598c579ee871(p0, p1, p2) end
-
----**`VEHICLE` ``**  
----[Native Documentation](https://rdr3natives.com/?_0x9CC94A948EAF5372)  
----_GET_P - _GET_T*
----@param trackIndex integer
----@param stationIndex integer
----@return integer
-function N_0x9cc94a948eaf5372(trackIndex, stationIndex) end
 
 ---**`VEHICLE` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0x9D12796EF4BF9EA9)  
