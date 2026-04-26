@@ -4819,7 +4819,7 @@ function TaskReact(ped, reactingTo, x, y, z, reactionName, p6, p7, p8) end
 
 ---**`TASK` ``**  
 ---[Native Documentation](https://rdr3natives.com/?_0x62D2916F56B9CD2D)  
----This native does not have an official description.
+---ped can't reload and walk, setting ammo needs to be set after using this or it will not make the animation reload, wont work if you are in first person
 ---@param ped integer
 ---@param unused boolean
 function TaskReloadWeapon(ped, unused) end
